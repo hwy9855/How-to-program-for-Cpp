@@ -10,7 +10,7 @@ struct _Goods {
 int main()
 {
 	_Goods good[51];
-	for (int i = 1; i <= 5 0; i++) {
+	for (int i = 1; i <= 50; i++) {
 		good[i].ID = i;
 		good[i].next = i + 1;
 	}
