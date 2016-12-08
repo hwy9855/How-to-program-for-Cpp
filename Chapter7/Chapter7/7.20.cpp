@@ -1,3 +1,5 @@
+//7.20
+
 #include <iostream>
 using namespace std;
 int n, _ifavalible[11] = { 0,0,0,0,0,0,0,0,0,0,0 };
