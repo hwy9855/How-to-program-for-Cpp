@@ -29,7 +29,7 @@ int main()
 	for (int i = 0; i < n; i++) {
 		Bucket[i] = new int[10];
 	}
-	//memset(Bucket, 0, sizeof(Bucket));
+	//memset(Bucket, 0, 10 * sizeof(Bucket));
 	for(int i=0;i<n;i++){
                 for(int j=0;j<10;j++)
                         Bucket[i][j]=0;
@@ -55,7 +55,7 @@ int main()
 				}
 			}
 		}
-		//memset(Bucket, 0, sizeof(Bucket));
+		//memset(Bucket, 0, 10 * sizeof(Bucket));
 		for(int i=0;i<n;i++){
                         for(int j=0;j<10;j++)
                                 Bucket[i][j]=0;
