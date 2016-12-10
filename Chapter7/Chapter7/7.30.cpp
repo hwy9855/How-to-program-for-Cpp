@@ -29,15 +29,18 @@ int main()
 	for (int i = 0; i < n; i++) {
 		Bucket[i] = new int[10];
 	}
-	memset(Bucket, 0, sizeof(Bucket));
+	//memset(Bucket, 0, sizeof(Bucket));
+	for(int i=0;i<n;i++){
+                for(int j=0;j<10;j++)
+                        Bucket[i][j]=0;
+	}
 	for (int i = 0; i < n; i++) {
 		cin >> Num[i];
 		max = len(Num[i])>max ? len(Num[i]) : max;
 	}
 	for (int i = 1; i <= max; i++) {
 		for (int j = 0; j < n; j++) {
-                        int tt=GetNum(Num[j], i);
-                        Bucket[j][tt] = Num[j];
+                        Bucket[j][GetNum(Num[j], i)] = Num[j];
 		}
 		for (int j = 0; j < n; j++) {
 			Num_[j] = Num[j];
@@ -52,7 +55,11 @@ int main()
 				}
 			}
 		}
-		memset(Bucket, 0, sizeof(Bucket));
+		//memset(Bucket, 0, sizeof(Bucket));
+		for(int i=0;i<n;i++){
+                        for(int j=0;j<10;j++)
+                                Bucket[i][j]=0;
+                }
 	}
 	for (int i = 0; i < n; i++) {
 		cout << Num[i] << " ";
