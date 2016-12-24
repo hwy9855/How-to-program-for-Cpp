@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void partition(int a[], int &left, int right) {
+int partition(int a[], int left, int right) {
 	if (left > right) {
 		return;
 	}
@@ -23,17 +23,16 @@ void partition(int a[], int &left, int right) {
 		}
 	}
 	a[left] = tmp;
-	return;
+	return left;
 }
 
 void QuickSort(int a[], int left, int right) {
 	if (left > right) {
 		return;
 	}
-	int i = left;
-	partition(a, i, right);
-	QuickSort(a, i + 1, right);
-	QuickSort(a, left, i - 1);
+	int mid = partition(a, left, right);
+	QuickSort(a, mid + 1, right);
+	QuickSort(a, left, mid - 1);
 	return;
 }
 
